@@ -33,7 +33,19 @@ app.post("/", function (req, res) {
       break;
   }
   console.log(calculator(num1, num2, operator));
-  res.send(`<h2> the result is : ${calculator(num1, num2, operator)}</h2>` );
+  res.send(`
+      <h2>
+     That was easy, your result is: ${calculator(num1, num2, operator)}
+    </h2>
+    <img src="https://image-repo-buraku.s3.eu-west-1.amazonaws.com/Lambda.png" alt="Lambda-Icon"class="center" width="10%" style="vertical-align:middle;margin:0px 100px">
+      <p>
+    There's no need for compliments </p>
+    <p>I already know i'm the smartest app in the world hahaha ;)</p>
+    <p>
+    By the way I'm running on a Lambda Function
+    </p>
+  
+  ` );
 });
 
 
